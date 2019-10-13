@@ -25,6 +25,8 @@ public class Categorias {
     private String dt_data;
     private float calorias;    
     private String tipo;
+    private String nome;   
+    private  String  dt_validade;
     
     
     /**
@@ -95,6 +97,34 @@ public class Categorias {
      */
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    /**
+     * @return the nome
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * @param nome the nome to set
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * @return the dt_validade
+     */
+    public String getDt_validade() {
+        return dt_validade;
+    }
+
+    /**
+     * @param dt_validade the dt_validade to set
+     */
+    public void setDt_validade(String dt_validade) {
+        this.dt_validade = dt_validade;
     }
     
 }
