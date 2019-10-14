@@ -23,8 +23,8 @@ public class CategorisTeste {
     
   public static void main(String[] args){
       
-      /*
-      Categorias c = new Categorias();
+     
+      Categorias c = new Categorias(); /*
       c.setDescricao("Comidas frutas");
       c.setCalorias(11.25f);
       c.setDt_data("1994/04/4");
@@ -40,13 +40,19 @@ public class CategorisTeste {
       //da.save(c);//Inserir Dados no banco de dados
       /*Select*/
       //Categorias c = da.find(4);//Select Individual
+      
+               /*Select All*//*
       for(Categorias s:da.findAll()){
        System.out.println(s.getId());
        System.out.println(s.getNome());
        System.out.println(s.getDescricao());
      
       }
+      */
+        /*Remove*/     
+      da.remove(4);
      
+      
       
     
      

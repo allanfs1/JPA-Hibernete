@@ -64,6 +64,8 @@ public class Dao {
       }
     
       
+      
+                   /*Select All*/
       public List<Categorias> findAll (){
           EntityManager em = new Connection().getEntityManager();
           List<Categorias> categorias = null;
@@ -79,6 +81,32 @@ public class Dao {
           
           return  categorias;
        }
+      
+      
+      
+      
+                  //Remove//
+         public Categorias remove(int id){
+               
+         EntityManager em = new Connection().getEntityManager();
+         Categorias categori  = null;
+         
+         try{
+            em.getTransaction().begin();
+            categori =  em.find(Categorias.class,id);
+            em.remove(categori);
+            em.getTransaction().commit();
+            
+         }catch(Exception e){
+           System.err.println(e);  
+           em.getTransaction().rollback();
+           
+         }finally{
+           em.close();
+         }
+         
+         return categori;
+      }
       
       
     
